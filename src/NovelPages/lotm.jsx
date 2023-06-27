@@ -53,11 +53,68 @@ const Lotm = () => {
                   </Typography>
                 </Grid>
               </Grid>
-              <Grid item xs={4} sx={{ bgcolor: "blue" }}>
-                <Typography>2222</Typography>
+              <Grid
+                item
+                container
+                direction={"column"}
+                xs={"auto"}
+                sx={{
+                  bgcolor: "skyblue",
+                  p: 2.5,
+                  borderRight: "2px solid black",
+                }}
+                display="flex"
+                justifyContent={"center"}
+              >
+                <Grid item container mt={0.5}>
+                  <Grid item display="flex" alignItems={"center"}>
+                    <Typography variant="subtitle2">
+                      Chinese Title : &nbsp;
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="subtitle1">诡秘之主</Typography>
+                  </Grid>
+                </Grid>
+                <Grid item container mt={0.5}>
+                  <Grid item display="flex" alignItems={"center"}>
+                    <Typography variant="subtitle2">Author : &nbsp;</Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography> Cuttlefish That Loves Diving</Typography>
+                  </Grid>
+                </Grid>
+                <Grid item container mt={0.5}>
+                  <Grid item display="flex" alignItems={"center"}>
+                    <Typography variant="subtitle2">
+                      Release Date : &nbsp;
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography> Apl 1, 2018 - May 1, 2020</Typography>
+                  </Grid>
+                </Grid>
               </Grid>
-              <Grid item xs={4} sx={{ bgcolor: "green" }}>
-                <Typography>3333</Typography>
+              <Grid
+                item
+                xs={"auto"}
+                sx={{
+                  bgcolor: "green",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <Typography
+                  variant="h5"
+                  align="center"
+                  bgcolor={grey[300]}
+                  borderRadius={2}
+                  p={1}
+                >
+                  Current Reading
+                  <br />
+                  520/1430
+                </Typography>
               </Grid>
             </Grid>
             <Grid item container direction={"column"}>
