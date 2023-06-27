@@ -1,13 +1,8 @@
 import { Typography, Grid } from "@mui/material";
 import Card from "./Components/Card";
-import videoBg from "./assets/homepagebg.mp4";
+
 function Novel() {
-  const videoStyle = {
-    width: "100%",
-    height: "100%",
-    marginBottom: "-10px",
-    objectFit: "cover",
-  };
+
   let mainCard = {
     width: "90%",
     imgsrc: "https://wallpaperaccess.com/full/8084043.jpg",

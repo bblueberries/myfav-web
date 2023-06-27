@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -16,6 +14,7 @@ export default function ActionAreaCard(props) {
           height="100%"
           image={cardDetail.imgsrc}
           alt="pics"
+          loading="lazy"
         />
       </CardActionArea>
       <CardContent sx={{ maxHeight: "1" }}>

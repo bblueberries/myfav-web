@@ -6,6 +6,7 @@ import Anime from "./Anime";
 import Manhwa from "./Manhwa";
 import Movie from "./Movie";
 import Manga from "./Manga";
+import Lotm from "./NovelPages/lotm";
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
         <Route path="/novel" element={<Novel />} />
         <Route path="/manga" element={<Manga />} />
         <Route path="/movie" element={<Movie />} />
+        <Route path="/novel/lotm" element={<Lotm />} />
       </Routes>
     </>
   );
