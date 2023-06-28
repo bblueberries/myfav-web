@@ -2,22 +2,19 @@ import { Typography, Grid } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import CustomRating from "../Components/CustomRating";
 import CustomImageList from "../Components/CustomImageList";
+import lotmBg from "../assets/lotmPreview/lotmMain.jpg";
 const Lotm = () => {
   return (
     <div>
       <Grid container direction={"column"}>
-        <Grid item xs={12} sx={{ backgroundColor: "yellow" }}>
+        <Grid item xs={12} sx={{ backgroundColor: "yellow" }} mt={2}>
           <Typography align="center" variant="h2">
             LORD OF THE MYSTERIES
           </Typography>
         </Grid>
-        <Grid item container xs={12}>
-          <Grid item xs={6} sx={{ bgcolor: "red", p: 2 }}>
-            <img
-              src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/c3/33/97.jpg"
-              loading="lazy"
-              width="100%"
-            />
+        <Grid item container xs={12} mt={4}>
+          <Grid item xs={6} sx={{ bgcolor: "red" }}>
+            <img src={lotmBg} loading="lazy" width="100%" />
           </Grid>
           <Grid item container xs={6} direction={"column"} px={2}>
             <Grid item container>
