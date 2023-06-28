@@ -137,7 +137,7 @@ const Lotm = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid container xs={12} mt={6} bgcolor={grey[800]} py={4}>
+        <Grid item container xs={12} mt={6} bgcolor={grey[800]} py={4}>
           <Grid item container direction={"column"}>
             <Grid item>
               <Typography variant="h3" align="center" color={"white"}>
@@ -151,6 +151,35 @@ const Lotm = () => {
               <Typography variant="subtitle2" align="center" color={"white"}>
                 At first, I started reading this novel because of these amazing
                 fanarts (And now, I LOVE IT!)
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item container direction={"column"} mt={6}>
+          <Grid item>
+            <Typography align="center" variant="h3">
+              WHAT I LOVE THE MOST
+            </Typography>
+          </Grid>
+          <Grid item container>
+            <Grid item xs={6}>
+              <img src={lotmBg} loading="lazy" width={"100%"} />
+            </Grid>
+            <Grid item xs={6}>
+              <Typography>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                nihil pariatur facere! Magni numquam, vitae quaerat perspiciatis
+                totam, perferendis eaque officiis sit consectetur tempora eum
+                excepturi itaque nobis quas sunt nam dignissimos in enim!
+                Laudantium doloremque magni labore consectetur voluptas,
+                possimus repudiandae incidunt, velit recusandae commodi ad!
+                Perspiciatis vel reiciendis eos. Repellendus sed numquam animi
+                eveniet veniam. Obcaecati dicta illum repudiandae quasi aut non
+                quam officiis itaque molestias nihil quibusdam minus saepe
+                expedita quisquam distinctio nesciunt amet corporis tempora
+                velit, est quae maxime quod deserunt. Id, eos ipsum illum
+                deserunt voluptatem, vitae officia consequuntur delectus amet
+                enim recusandae, hic facilis?
               </Typography>
             </Grid>
           </Grid>
