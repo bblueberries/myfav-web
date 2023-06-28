@@ -14,10 +14,10 @@ const itemData = ImageData;
 export default function QuiltedImageList() {
   return (
     <ImageList
-      sx={{ width: "80%", height: "450px" }}
+      sx={{ width: "80%", height: "600px" }}
       variant="quilted"
-      cols={4}
-      rowHeight={121}
+      cols={3}
+      rowHeight={110}
     >
       {itemData.map((item) => (
         <ImageListItem

@@ -140,15 +140,21 @@ const Lotm = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid container xs={12} mt={6}>
+        <Grid container xs={12} mt={6} bgcolor={grey[800]} py={4}>
           <Grid item container direction={"column"}>
             <Grid item>
-              <Typography variant="h3" align="center">
+              <Typography variant="h3" align="center" color={"white"}>
                 PREVIEW ARTS
               </Typography>
             </Grid>
-            <Grid item display={"flex"} justifyContent={"center"}>
+            <Grid item display={"flex"} justifyContent={"center"} mt={3}>
               <CustomImageList />
+            </Grid>
+            <Grid item>
+              <Typography variant="subtitle2" align="center" color={"white"}>
+                At first, I started reading this novel because of these amazing
+                fanarts (And now, I LOVE IT!)
+              </Typography>
             </Grid>
           </Grid>
         </Grid>
