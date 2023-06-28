@@ -1,6 +1,7 @@
 import { Typography, Grid } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import CustomRating from "../Components/CustomRating";
+import CustomImageList from "../Components/CustomImageList";
 const Lotm = () => {
   return (
     <div>
@@ -18,7 +19,7 @@ const Lotm = () => {
               width="100%"
             />
           </Grid>
-          <Grid item container xs={6} direction={"column"}>
+          <Grid item container xs={6} direction={"column"} px={2}>
             <Grid item container>
               <Grid
                 item
@@ -118,20 +119,36 @@ const Lotm = () => {
               </Grid>
             </Grid>
             <Grid item container direction={"column"}>
-              <Grid item bgcolor={"orange"}>
-                <Typography>Synopsis</Typography>
+              <Grid item bgcolor={"orange"} borderBottom={"1px solid black"}>
+                <Typography variant="subtitle2">SYNOPSIS</Typography>
               </Grid>
-              <Grid item bgcolor={"purple"}>
-                <Typography>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Adipisci, labore porro quae perferendis ad repellendus nisi
-                  laboriosam sequi optio quod reprehenderit alias dolore sed
-                  voluptate sapiente explicabo qui illum eius voluptatem unde
-                  temporibus, similique aliquam repudiandae vitae. Soluta
-                  commodi quo doloribus quis praesentium debitis officiis minima
-                  suscipit, mollitia incidunt voluptatem!
+              <Grid item bgcolor={"purple"} mt={1}>
+                <Typography variant="subtitle1">
+                  &emsp;Waking up to be faced with a string of mysteries, Zhou
+                  Mingrui finds himself reincarnated as Klein Moretti in an
+                  alternate Victorian era world where he sees a world filled
+                  with machinery, cannons, dreadnoughts, airships, difference
+                  machines, as well as Potions, Divination, Hexes, Tarot Cards,
+                  Sealed Artifacts… <br />
+                  &emsp;The Light continues to shine but the mystery has never
+                  gone far. Follow Klein as he finds himself entangled with the
+                  Churches of the world—both orthodox and unorthodox—while he
+                  slowly develops newfound powers thanks to the Beyonder
+                  potions.
                 </Typography>
               </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid container xs={12} mt={6}>
+          <Grid item container direction={"column"}>
+            <Grid item>
+              <Typography variant="h3" align="center">
+                PREVIEW ARTS
+              </Typography>
+            </Grid>
+            <Grid item display={"flex"} justifyContent={"center"}>
+              <CustomImageList />
             </Grid>
           </Grid>
         </Grid>
