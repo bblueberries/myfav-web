@@ -2,7 +2,6 @@ import { Typography, Grid } from "@mui/material";
 import Card from "./Components/Card";
 
 function Novel() {
-
   let mainCard = {
     width: "90%",
     imgsrc: "https://wallpaperaccess.com/full/8084043.jpg",
@@ -28,7 +27,7 @@ function Novel() {
   return (
     <>
       <Grid container justifyContent="center">
-        <Card cardDetail={mainCard} />
+        <Card cardDetail={mainCard} url="/novel/lotm" />
       </Grid>
       <Grid
         container
@@ -38,11 +37,11 @@ function Novel() {
         sx={{ mt: 10, mb: 8 }}
       >
         <Grid item xs={5}>
-          <Card cardDetail={subCard1} />
+          <Card cardDetail={subCard1} url="" />
         </Grid>
 
         <Grid item xs={5}>
-          <Card cardDetail={subCard2} />
+          <Card cardDetail={subCard2} url="" />
         </Grid>
       </Grid>
     </>

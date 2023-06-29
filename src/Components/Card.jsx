@@ -3,12 +3,14 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, Grid } from "@mui/material";
-
+import { useNavigate } from "react-router";
 export default function ActionAreaCard(props) {
   let cardDetail = props.cardDetail;
+  let url = props.url;
+  const navigate = useNavigate();
   return (
     <Card sx={{ maxWidth: cardDetail.width, borderRadius: "0" }}>
-      <CardActionArea>
+      <CardActionArea onClick={() => navigate(url)}>
         <CardMedia
           component="img"
           height="100%"
