@@ -4,20 +4,21 @@ import CustomRating from "../Components/CustomRating";
 import CustomImageList from "../Components/CustomImageList";
 import lotmBg from "../assets/lotmPreview/lotmMain.jpg";
 import potionImage from "../assets/lotmPreview/potionImage.jpeg";
+import greyfogWallpaper from "../assets/lotmPreview/greyfogWallpaper.avif";
 const Lotm = () => {
   return (
     <div>
       <Grid container direction={"column"}>
-        <Grid item xs={12} sx={{ backgroundColor: "yellow" }} mt={2}>
+        <Grid item xs={12} mt={2}>
           <Typography align="center" variant="h2">
             LORD OF THE MYSTERIES
           </Typography>
         </Grid>
-        <Grid item container xs={12} mt={4} px={4}>
-          <Grid item xs={6} sx={{ bgcolor: "red" }}>
+        <Grid item container xs={12} mt={10} px={4}>
+          <Grid item xs={6} px={1}>
             <img src={lotmBg} loading="lazy" width="100%" />
           </Grid>
-          <Grid item container xs={6} direction={"column"} px={2}>
+          <Grid item container xs={6} direction={"column"} px={3}>
             <Grid item container>
               <Grid
                 item
@@ -25,20 +26,20 @@ const Lotm = () => {
                 xs={"auto"}
                 direction={"column"}
                 sx={{
-                  bgcolor: "green",
-                  px: 1.5,
+                  px: 2,
                   py: 1,
-                  borderRight: "2px solid black",
+                  borderRight: "1px solid grey",
                 }}
               >
-                <Grid item px={1.0}>
+                <Grid item>
                   <Typography
                     variant="h6"
                     align="center"
-                    bgcolor={grey[300]}
                     borderRadius={3}
+                    bgcolor={grey[300]}
+                    px={1}
                   >
-                    SCORE
+                    MY SCORE
                   </Typography>
                 </Grid>
                 <Grid item>
@@ -46,7 +47,7 @@ const Lotm = () => {
                     9.5
                   </Typography>
                 </Grid>
-                <Grid item>
+                <Grid item display={"flex"} justifyContent={"center"}>
                   <Typography>
                     <CustomRating />
                   </Typography>
@@ -58,9 +59,8 @@ const Lotm = () => {
                 direction={"column"}
                 xs={"auto"}
                 sx={{
-                  bgcolor: "skyblue",
-                  p: 2.5,
-                  borderRight: "2px solid black",
+                  px: 1.5,
+                  borderRight: "1px solid grey",
                 }}
                 display="flex"
                 justifyContent={"center"}
@@ -98,9 +98,9 @@ const Lotm = () => {
                 item
                 xs={"auto"}
                 sx={{
-                  bgcolor: "green",
                   display: "flex",
                   alignItems: "center",
+                  px: 2.5,
                 }}
               >
                 <Typography
@@ -117,10 +117,10 @@ const Lotm = () => {
               </Grid>
             </Grid>
             <Grid item container direction={"column"}>
-              <Grid item bgcolor={"orange"} borderBottom={"1px solid black"}>
+              <Grid item b borderBottom={"1px solid black"} mt={2}>
                 <Typography variant="subtitle2">SYNOPSIS</Typography>
               </Grid>
-              <Grid item bgcolor={"purple"} mt={1}>
+              <Grid item mt={2}>
                 <Typography variant="subtitle1">
                   &emsp;Waking up to be faced with a string of mysteries, Zhou
                   Mingrui finds himself reincarnated as Klein Moretti in an
@@ -138,7 +138,21 @@ const Lotm = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item container xs={12} mt={6} bgcolor={grey[800]} py={4}>
+        <Grid
+          item
+          container
+          xs={12}
+          mt={12}
+          sx={{
+            pt: 4,
+            pb: 7,
+            backgroundImage:
+              "url(https://img.freepik.com/premium-photo/fog-smoke-move-black-color-background-smoke-black-background-light-smoke_232104-3676.jpg)",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+        >
           <Grid item container direction={"column"}>
             <Grid item>
               <Typography variant="h3" align="center" color={"white"}>
@@ -165,7 +179,7 @@ const Lotm = () => {
           <Grid
             item
             container
-            mt={8}
+            mt={6}
             display={"flex"}
             justifyContent={"center"}
           >
@@ -179,8 +193,13 @@ const Lotm = () => {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid item container xs={6} px={6} direction={"column"} mt={7}>
+            <Grid item container xs={6} px={6} direction={"column"} mt={6}>
               <Grid item>
+                <Typography variant="subtitle1" fontWeight={"bold"}>
+                  The Power System
+                </Typography>
+              </Grid>
+              <Grid item mt={2}>
                 <Typography variant="subtitle1">
                   The power system is extremely well done. <br />
                   &emsp;It has solid rules that can't be violated and play a key
