@@ -8,9 +8,14 @@ export default function ActionAreaCard(props) {
   let cardDetail = props.cardDetail;
   let url = props.url;
   const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(url);
+    window.scrollTo(0, 0); // Reset window scroll position
+  };
   return (
     <Card sx={{ maxWidth: cardDetail.width, borderRadius: "0" }}>
-      <CardActionArea onClick={() => navigate(url)}>
+      <CardActionArea onClick={handleClick}>
         <CardMedia
           component="img"
           height="100%"
