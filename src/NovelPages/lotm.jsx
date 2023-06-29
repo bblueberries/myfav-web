@@ -3,6 +3,7 @@ import { grey } from "@mui/material/colors";
 import CustomRating from "../Components/CustomRating";
 import CustomImageList from "../Components/CustomImageList";
 import lotmBg from "../assets/lotmPreview/lotmMain.jpg";
+import potionImage from "../assets/lotmPreview/potionImage.jpeg";
 const Lotm = () => {
   return (
     <div>
@@ -12,7 +13,7 @@ const Lotm = () => {
             LORD OF THE MYSTERIES
           </Typography>
         </Grid>
-        <Grid item container xs={12} mt={4}>
+        <Grid item container xs={12} mt={4} px={4}>
           <Grid item xs={6} sx={{ bgcolor: "red" }}>
             <img src={lotmBg} loading="lazy" width="100%" />
           </Grid>
@@ -155,32 +156,51 @@ const Lotm = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item container direction={"column"} mt={6}>
+        <Grid item container direction={"column"} mt={6} px={4}>
           <Grid item>
             <Typography align="center" variant="h3">
               WHAT I LOVE THE MOST
             </Typography>
           </Grid>
-          <Grid item container>
-            <Grid item xs={6}>
-              <img src={lotmBg} loading="lazy" width={"100%"} />
+          <Grid
+            item
+            container
+            mt={8}
+            display={"flex"}
+            justifyContent={"center"}
+          >
+            <Grid item container direction={"column"} xs={4} px={5}>
+              <Grid item>
+                <img src={potionImage} loading="lazy" width={"100%"} />
+              </Grid>
+              <Grid item>
+                <Typography align="center" variant="h6">
+                  All beyonders' sequences table
+                </Typography>
+              </Grid>
             </Grid>
-            <Grid item xs={6}>
-              <Typography>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                nihil pariatur facere! Magni numquam, vitae quaerat perspiciatis
-                totam, perferendis eaque officiis sit consectetur tempora eum
-                excepturi itaque nobis quas sunt nam dignissimos in enim!
-                Laudantium doloremque magni labore consectetur voluptas,
-                possimus repudiandae incidunt, velit recusandae commodi ad!
-                Perspiciatis vel reiciendis eos. Repellendus sed numquam animi
-                eveniet veniam. Obcaecati dicta illum repudiandae quasi aut non
-                quam officiis itaque molestias nihil quibusdam minus saepe
-                expedita quisquam distinctio nesciunt amet corporis tempora
-                velit, est quae maxime quod deserunt. Id, eos ipsum illum
-                deserunt voluptatem, vitae officia consequuntur delectus amet
-                enim recusandae, hic facilis?
-              </Typography>
+            <Grid item container xs={6} px={6} direction={"column"} mt={7}>
+              <Grid item>
+                <Typography variant="subtitle1">
+                  The power system is extremely well done. <br />
+                  &emsp;It has solid rules that can't be violated and play a key
+                  part in plot progression while also having a crazy amount of
+                  flexibility. It has 22 pathways. Starting at 9th sequence,the
+                  less of your sequence number,the Stronger you are. (But easier
+                  to loss self control and turn into monster) <br />
+                  &emsp; After reading through 500 chapters, I never seen any
+                  power system that can compare to LOTM's. It very
+                  unique,complicating and important to the story. Each has
+                  different advantage, some of them are strong since early
+                  sequence, some are for create artifact or some are for spying.
+                </Typography>
+              </Grid>
+              <Grid item mt={5}>
+                <Typography variant="subtitle2" align="center">
+                  What I can say is you guys have to try this amazing novels and
+                  you will end up addicting it like me...
+                </Typography>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
