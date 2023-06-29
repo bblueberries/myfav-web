@@ -12,12 +12,20 @@ import {
   AodOutlined,
   SpaceDashboardOutlined,
 } from "@mui/icons-material";
-import Anime from "./Anime";
-import { useNavigate } from "react-router";
+
+import { useNavigate, useLocation } from "react-router";
+import { useEffect } from "react";
 
 export default function LabelBottomNavigation() {
-  const [value, setValue] = React.useState("value");
+  const [value, setValue] = React.useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const path = location.pathname;
+    setValue(path);
+  }, [location]);
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -34,35 +42,31 @@ export default function LabelBottomNavigation() {
     >
       <BottomNavigationAction
         label="Anime"
-        value="anime"
+        value="/anime"
         icon={<LiveTv />}
         onClick={() => navigate("/anime")}
-        // LinkComponent={Anime}
       />
       <BottomNavigationAction
         label="Manhwa"
-        value="manhwa"
+        value="/manhwa"
         icon={<AodOutlined />}
         onClick={() => navigate("/manhwa")}
-        // href="/manhwa"
       />
       <BottomNavigationAction
         label="Novel"
-        value="novel"
+        value="/novel"
         icon={<AutoStories />}
         onClick={() => navigate("/novel")}
-        // href="/novel"
       />
       <BottomNavigationAction
         label="Manga"
-        value="manga"
+        value="/manga"
         icon={<SpaceDashboardOutlined />}
         onClick={() => navigate("/manga")}
-        // href="/manga"
       />
       <BottomNavigationAction
         label="Movie"
-        value="movie"
+        value="/movie"
         icon={<MovieCreation />}
         onClick={() => navigate("/movie")}
       />
