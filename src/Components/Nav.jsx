@@ -15,6 +15,7 @@ import {
 
 import { useNavigate, useLocation } from "react-router";
 import { useEffect } from "react";
+import { grey } from "@mui/material/colors";
 
 export default function LabelBottomNavigation() {
   const [value, setValue] = React.useState("");
@@ -34,7 +35,7 @@ export default function LabelBottomNavigation() {
     <BottomNavigation
       sx={{
         width: "100%",
-        backgroundColor: "grey",
+        backgroundColor: grey[500],
       }}
       value={value}
       onChange={handleChange}

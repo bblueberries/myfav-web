@@ -9,6 +9,7 @@ import Manga from "./Manga";
 import Lotm from "./NovelPages/lotm";
 import Footer from "./Components/Footer";
 function App() {
+  const isHomePage = location.pathname === "/";
   return (
     <>
       <Nav />
@@ -21,7 +22,7 @@ function App() {
         <Route path="/movie" element={<Movie />} />
         <Route path="/novel/lotm" element={<Lotm />} />
       </Routes>
-      <Footer />
+      {!isHomePage && <Footer />}
     </>
   );
 }
