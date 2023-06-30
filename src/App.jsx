@@ -1,5 +1,5 @@
 import Novel from "./Novel";
-import Nav from "./Nav";
+import Nav from "./Components/Nav";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Anime from "./Anime";
@@ -7,6 +7,7 @@ import Manhwa from "./Manhwa";
 import Movie from "./Movie";
 import Manga from "./Manga";
 import Lotm from "./NovelPages/lotm";
+import Footer from "./Components/Footer";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
         <Route path="/movie" element={<Movie />} />
         <Route path="/novel/lotm" element={<Lotm />} />
       </Routes>
+      <Footer />
     </>
   );
 }
