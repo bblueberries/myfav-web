@@ -1,6 +1,6 @@
 import Novel from "./Novel";
 import Nav from "./Components/Nav";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Router } from "react-router-dom";
 import Home from "./Home";
 import Anime from "./Anime";
 import Manhwa from "./Manhwa";
@@ -22,7 +22,7 @@ function App() {
         <Route path="/movie" element={<Movie />} />
         <Route path="/novel/lotm" element={<Lotm />} />
       </Routes>
-      {!isHomePage && <Footer />}
+      <Footer />
     </>
   );
 }
