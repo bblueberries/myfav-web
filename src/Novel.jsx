@@ -1,6 +1,6 @@
 import { Typography, Grid } from "@mui/material";
 import Card from "./Components/Card";
-
+import SearchBar from "./Components/SearchBar";
 function Novel() {
   let mainCard = {
     width: "90%",
@@ -26,8 +26,15 @@ function Novel() {
   };
   return (
     <>
-      <Grid container justifyContent="center">
-        <Card cardDetail={mainCard} url="/novel/lotm" />
+      <Grid container>
+        <Grid item xs={"auto"}>
+          <SearchBar />
+        </Grid>
+      </Grid>
+      <Grid container>
+        <Grid item sx={{ display: "flex", justifyContent: "center" }}>
+          <Card cardDetail={mainCard} url="/novel/lotm" />{" "}
+        </Grid>
       </Grid>
       <Grid
         container
