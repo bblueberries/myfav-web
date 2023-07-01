@@ -2,7 +2,7 @@ import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
-import { Button } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import { grey } from "@mui/material/colors";
 
 const topics = ["Topic 1", "Topic 2", "Topic 3", "Topic 4", "Topic 5"]; // Example list of topics
@@ -10,9 +10,9 @@ const topics = ["Topic 1", "Topic 2", "Topic 3", "Topic 4", "Topic 5"]; // Examp
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.black, 0.2),
+  backgroundColor: grey[400],
   "&:hover": {
-    backgroundColor: alpha(theme.palette.common.black, 0.1),
+    backgroundColor: grey[300],
   },
   marginLeft: 0,
   width: "100%",
@@ -21,15 +21,24 @@ const Search = styled("div")(({ theme }) => ({
     width: "auto",
   },
 }));
-
+const CustomButton = styled(Button)(({ theme }) => ({
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: grey[600],
+  "&:hover": {
+    backgroundColor: grey[500],
+  },
+  width: "100%",
+  padding: theme.spacing(1, 1),
+}));
 const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
+  padding: theme.spacing(1, 1),
   height: "100%",
   position: "absolute",
   pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  top: theme.spacing(5, 5),
+  // display: "flex",
+  // alignItems: "center",
+  // justifyContent: "center",
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
@@ -58,45 +67,52 @@ export default function SearchAppBar() {
     setSearchText(text);
 
     // Perform the search logic here
-    const filteredTopics = topics.filter((topic) =>
-      topic.toLowerCase().includes(text.toLowerCase())
-    );
+    const filteredTopics = topics.filter((topic) => {
+      const lowercaseTopic = topic.toLowerCase();
+      const lowercaseText = text.toLowerCase();
+
+      // Check if the first letter of the topic matches the user's input
+      if (lowercaseTopic.startsWith(lowercaseText)) {
+        return true;
+      }
+
+      return false;
+    });
+
     setSearchResults(filteredTopics);
   };
 
-  const clearSearch = () => {
-    setSearchText("");
-  };
-
   return (
-    <Search>
-      <SearchIconWrapper>
-        <SearchIcon />
-      </SearchIconWrapper>
-      <StyledInputBase
-        placeholder="Search…"
-        inputProps={{ "aria-label": "search" }}
-        value={searchText}
-        onChange={handleSearch}
-      />
-      {searchText.length > 0 && (
-        // <></>
-        <Button
-          variant="text"
-          onClick={clearSearch}
-          sx={{ color: "black", fontSize: "9px" }}
-          edge="end"
-        >
-          Clear
-        </Button>
-      )}
-      {/* {searchResults.length > 0 && searchText.length > 0 && (
-        <ul>
-          {searchResults.map((result) => (
-            <li key={result}>{result}</li>
-          ))}
-        </ul>
-      )} */}
-    </Search>
+    <Grid container>
+      <Grid item>
+        <Search>
+          <SearchIconWrapper>
+            <SearchIcon />
+          </SearchIconWrapper>
+          <StyledInputBase
+            placeholder="Search…"
+            inputProps={{ "aria-label": "search" }}
+            value={searchText}
+            onChange={handleSearch}
+            sx={{
+              borderBottom:
+                searchResults.length > 0 && searchText.length > 0
+                  ? "1px solid grey"
+                  : "none",
+            }}
+          />
+
+          {searchResults.length > 0 && searchText.length > 0 && (
+            <Grid container direction={"column"} px={2}>
+              {searchResults.map((result) => (
+                <Grid item key={result} my={1}>
+                  <CustomButton>{result}</CustomButton>
+                </Grid>
+              ))}
+            </Grid>
+          )}
+        </Search>
+      </Grid>
+    </Grid>
   );
 }
