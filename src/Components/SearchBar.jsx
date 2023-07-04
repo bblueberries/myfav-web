@@ -4,9 +4,20 @@ import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { Button, Grid, Typography } from "@mui/material";
 import { grey } from "@mui/material/colors";
+import { useNavigate } from "react-router";
 
-const topics = ["Topic 1", "Topic 2", "Topic 3", "Topic 4", "Topic 5"]; // Example list of topics
+const topics = [
+  "Lord of the mysteries",
+  "Omniscient reader's viewpoint",
+  "Classroom of the elite",
+]; // list of topics
+const destination = {
+  [topics[0]]: "/novel/lotm",
+  [topics[1]]: "/novel/orv",
+  [topics[2]]: "/novel/cote",
+};
 
+console.log(destination["Lord of the mysteries"]);
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -81,7 +92,7 @@ export default function SearchAppBar() {
 
     setSearchResults(filteredTopics);
   };
-
+  const navigate = useNavigate();
   return (
     <Grid container>
       <Grid item>
@@ -94,19 +105,21 @@ export default function SearchAppBar() {
             inputProps={{ "aria-label": "search" }}
             value={searchText}
             onChange={handleSearch}
-            sx={{
-              borderBottom:
-                searchResults.length > 0 && searchText.length > 0
-                  ? "1px solid grey"
-                  : "none",
-            }}
+            // sx={{
+            //   borderBottom:
+            //     searchResults.length > 0 && searchText.length > 0
+            //       ? "1px solid grey"
+            //       : "none",
+            // }}
           />
 
           {searchResults.length > 0 && searchText.length > 0 && (
             <Grid container direction={"column"} px={2}>
               {searchResults.map((result) => (
                 <Grid item key={result} my={1}>
-                  <CustomButton>{result}</CustomButton>
+                  <CustomButton onClick={() => navigate(destination[result])}>
+                    {result}
+                  </CustomButton>
                 </Grid>
               ))}
             </Grid>
