@@ -61,7 +61,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("sm")]: {
-      width: "12ch",
+      width: "15ch",
       "&:focus": {
         width: "20ch",
       },
@@ -94,7 +94,7 @@ export default function SearchAppBar() {
   };
   const navigate = useNavigate();
   return (
-    <Grid container>
+    <Grid container sx={{ position: "absolute", zIndex: "1" }}>
       <Grid item>
         <Search>
           <SearchIconWrapper>
@@ -105,12 +105,6 @@ export default function SearchAppBar() {
             inputProps={{ "aria-label": "search" }}
             value={searchText}
             onChange={handleSearch}
-            // sx={{
-            //   borderBottom:
-            //     searchResults.length > 0 && searchText.length > 0
-            //       ? "1px solid grey"
-            //       : "none",
-            // }}
           />
 
           {searchResults.length > 0 && searchText.length > 0 && (
