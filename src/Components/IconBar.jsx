@@ -16,59 +16,67 @@ import {
 import { useNavigate, useLocation } from "react-router";
 import { useEffect } from "react";
 import { grey } from "@mui/material/colors";
+// import SearchAppBar from "./SearchBar";
 
-export default function LabelBottomNavigation() {
-  const [value, setValue] = React.useState("");
+export default function LabelBottomNavigation(props) {
+  const currentPath = props.currentPath;
+  const [value, setValue] = React.useState(currentPath);
   const navigate = useNavigate();
-  const location = useLocation();
+
+  const handleChange = (event) => {
+    // setValue(newValue);
+    // alert("hello");
+  };
 
   useEffect(() => {
-    const path = location.pathname;
-    setValue(path);
-  }, [location]);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+    setValue(currentPath); // Update the value when currentPath changes
+  }, [currentPath]);
 
   return (
     <BottomNavigation
       sx={{
         width: "100%",
-        backgroundColor: grey[500],
+        backgroundColor: "transparent",
+        position: "sticky",
+        left: "0",
+        top: "0",
+        zIndex: "1",
       }}
       value={value}
-      onChange={handleChange}
-      position="center"
     >
       <BottomNavigationAction
         label="Anime"
         value="/anime"
         icon={<LiveTv />}
+        // showLabel
         onClick={() => navigate("/anime")}
       />
       <BottomNavigationAction
         label="Manhwa"
         value="/manhwa"
         icon={<AodOutlined />}
+        // showLabel
         onClick={() => navigate("/manhwa")}
       />
       <BottomNavigationAction
         label="Novel"
         value="/novel"
         icon={<AutoStories />}
+        // showLabel
         onClick={() => navigate("/novel")}
       />
       <BottomNavigationAction
         label="Manga"
         value="/manga"
         icon={<SpaceDashboardOutlined />}
+        // showLabel
         onClick={() => navigate("/manga")}
       />
       <BottomNavigationAction
         label="Movie"
         value="/movie"
         icon={<MovieCreation />}
+        // showLabel
         onClick={() => navigate("/movie")}
       />
     </BottomNavigation>

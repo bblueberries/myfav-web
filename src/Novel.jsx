@@ -28,7 +28,7 @@ function Novel() {
     <>
       <Grid container>
         <Grid item xs={"auto"}>
-          <SearchBar />
+          {/* <SearchBar /> */}
         </Grid>
       </Grid>
       <Grid container>

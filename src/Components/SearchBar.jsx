@@ -5,19 +5,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Button, Grid, Typography } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { useNavigate } from "react-router";
+import { useEffect } from "react";
 
-const topics = [
-  "Lord of the mysteries",
-  "Omniscient reader's viewpoint",
-  "Classroom of the elite",
-]; // list of topics
-const destination = {
-  [topics[0]]: "/novel/lotm",
-  [topics[1]]: "/novel/orv",
-  [topics[2]]: "/novel/cote",
-};
-
-console.log(destination["Lord of the mysteries"]);
+// console.log(destination["Lord of the mysteries"]);
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -69,9 +59,19 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function SearchAppBar() {
+export default function SearchAppBar(props) {
+  const currentPath = props.currentPath;
+  let topics = props.topics;
+  let destination = props.destination;
+  // console.log(topics);
+  // console.log(destination);
   const [searchText, setSearchText] = React.useState(""); // State to hold the search text
   const [searchResults, setSearchResults] = React.useState([]); // State to hold the search results
+
+  useEffect(() => {
+    // Reset the search text when the currentPath changes
+    setSearchText("");
+  }, [currentPath]);
 
   const handleSearch = (event) => {
     const text = event.target.value;
@@ -93,8 +93,20 @@ export default function SearchAppBar() {
     setSearchResults(filteredTopics);
   };
   const navigate = useNavigate();
+  const handleClick = (destination) => {
+    navigate(destination);
+  };
   return (
-    <Grid container sx={{ position: "absolute", zIndex: "1" }}>
+    <Grid
+      container
+      sx={{
+        position: "absolute",
+        zIndex: "1",
+        width: "auto",
+        right: "3vh",
+        top: "1.6vh",
+      }}
+    >
       <Grid item>
         <Search>
           <SearchIconWrapper>
@@ -111,7 +123,9 @@ export default function SearchAppBar() {
             <Grid container direction={"column"} px={2}>
               {searchResults.map((result) => (
                 <Grid item key={result} my={1}>
-                  <CustomButton onClick={() => navigate(destination[result])}>
+                  <CustomButton
+                    onClick={() => handleClick(destination[result])}
+                  >
                     {result}
                   </CustomButton>
                 </Grid>

@@ -1,5 +1,5 @@
 import Novel from "./Novel";
-import Nav from "./Components/Nav";
+
 import { Routes, Route, Router } from "react-router-dom";
 import Home from "./Home";
 import Anime from "./Anime";
@@ -8,11 +8,13 @@ import Movie from "./Movie";
 import Manga from "./Manga";
 import Lotm from "./NovelPages/lotm";
 import Footer from "./Components/Footer";
+import Appbar from "./Components/Appbar";
 function App() {
   const isHomePage = location.pathname === "/";
   return (
     <>
-      <Nav />
+      <Appbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/anime" element={<Anime />} />
