@@ -60,55 +60,69 @@ export default function SearchAppBar() {
     setTopics(updatedTopics);
     setDestination(updatedDestination);
   }, [currentPath]);
+
+  const isHomePage = currentPath === "/";
   return (
-    <Box
-      sx={{ flexGrow: 1, position: "sticky", left: "0", top: "0", zIndex: "1" }}
-    >
-      <AppBar position="static" sx={{ bgcolor: grey[500] }}>
-        <Toolbar>
-          <Box sx={{ display: "flex", alignItems: "center", flexGrow: "1" }}>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              sx={{ mr: 0 }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              //   sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-            ></Typography>
-          </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              width: "500px",
-              left: "50%",
-              transform: "translateX(-50%)",
-            }}
-          >
-            <IconBar currentPath={currentPath} />
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              flexGrow: "1",
-              //   position: "absolute",
-            }}
-          >
-            <SearchBar
-              topics={topics}
-              destination={destination}
-              currentPath={currentPath}
-            />
-          </Box>
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <>
+      {!isHomePage && (
+        <Box
+          sx={{
+            flexGrow: 1,
+            position: "sticky",
+            left: "0",
+            top: "0",
+            zIndex: "1",
+          }}
+        >
+          <AppBar position="static" sx={{ bgcolor: grey[500] }}>
+            <Toolbar>
+              <Box
+                sx={{ display: "flex", alignItems: "center", flexGrow: "1" }}
+              >
+                <IconButton
+                  size="large"
+                  edge="start"
+                  color="inherit"
+                  aria-label="open drawer"
+                  sx={{ mr: 0 }}
+                >
+                  <MenuIcon />
+                </IconButton>
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="div"
+                  //   sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+                ></Typography>
+              </Box>
+              <Box
+                sx={{
+                  position: "absolute",
+                  width: "500px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                }}
+              >
+                <IconBar currentPath={currentPath} />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  flexGrow: "1",
+                  //   position: "absolute",
+                }}
+              >
+                <SearchBar
+                  topics={topics}
+                  destination={destination}
+                  currentPath={currentPath}
+                />
+              </Box>
+            </Toolbar>
+          </AppBar>
+        </Box>
+      )}
+    </>
   );
 }
