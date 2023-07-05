@@ -1,6 +1,7 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import { grey, red } from "@mui/material/colors";
 import videoBg from "./assets/homepagebg.mp4";
+import { useNavigate } from "react-router";
 const Home = () => {
   const videoStyle = {
     width: "100%",
@@ -8,14 +9,8 @@ const Home = () => {
     marginBottom: "-10px",
     objectFit: "cover",
   };
-  const overlay = {
-    position: "absolute",
-    top: "0",
-    left: "0",
-    width: "100%",
-    height: "100%",
-    backgroundColor: "rgba(0, 0, 0,0.9)",
-  };
+
+  const navigate = useNavigate();
   return (
     <Container
       sx={{ position: "relative", width: "100%", height: "100vh" }}
@@ -44,6 +39,13 @@ const Home = () => {
         <Typography variant="subtitle2">
           Hope you got a good taste :)
         </Typography>
+        <Button
+          sx={{ mt: 5, fontSize: "22px" }}
+          variant="outlined"
+          onClick={() => navigate("/novel")}
+        >
+          LET START
+        </Button>
       </Box>
     </Container>
   );
