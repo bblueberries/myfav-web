@@ -96,44 +96,47 @@ export default function SearchAppBar(props) {
   const handleClick = (destination) => {
     navigate(destination);
   };
-  return (
-    <Grid
-      container
-      sx={{
-        position: "absolute",
-        zIndex: "1",
-        width: "auto",
-        right: "3vh",
-        top: "1.6vh",
-      }}
-    >
-      <Grid item>
-        <Search>
-          <SearchIconWrapper>
-            <SearchIcon />
-          </SearchIconWrapper>
-          <StyledInputBase
-            placeholder="Search…"
-            inputProps={{ "aria-label": "search" }}
-            value={searchText}
-            onChange={handleSearch}
-          />
+  const IsMainPage = ["/anime", "/manhwa", "/novel", "/manga", "/movie"];
+  if (IsMainPage.includes(currentPath)) {
+    return (
+      <Grid
+        container
+        sx={{
+          position: "absolute",
+          zIndex: "1",
+          width: "auto",
+          right: "3vh",
+          top: "1.6vh",
+        }}
+      >
+        <Grid item>
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ "aria-label": "search" }}
+              value={searchText}
+              onChange={handleSearch}
+            />
 
-          {searchResults.length > 0 && searchText.length > 0 && (
-            <Grid container direction={"column"} px={2}>
-              {searchResults.map((result) => (
-                <Grid item key={result} my={1}>
-                  <CustomButton
-                    onClick={() => handleClick(destination[result])}
-                  >
-                    {result}
-                  </CustomButton>
-                </Grid>
-              ))}
-            </Grid>
-          )}
-        </Search>
+            {searchResults.length > 0 && searchText.length > 0 && (
+              <Grid container direction={"column"} px={2}>
+                {searchResults.map((result) => (
+                  <Grid item key={result} my={1}>
+                    <CustomButton
+                      onClick={() => handleClick(destination[result])}
+                    >
+                      {result}
+                    </CustomButton>
+                  </Grid>
+                ))}
+              </Grid>
+            )}
+          </Search>
+        </Grid>
       </Grid>
-    </Grid>
-  );
+    );
+  } else return <></>;
 }
