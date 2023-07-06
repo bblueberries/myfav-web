@@ -41,7 +41,10 @@ export default function TemporaryDrawer() {
         <ListItem key={"hello"} disablePadding>
           <ListItemButton onClick={() => navigate("/")}>
             <ListItemIcon>{<HomeIcon />}</ListItemIcon>
-            <ListItemText primary={"HOME"} />
+            <ListItemText
+              primary={"HOME"}
+              primaryTypographyProps={{ variant: "subtitle2" }}
+            />
           </ListItemButton>
         </ListItem>
       </List>
@@ -55,7 +58,10 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 {index % 2 === 0 ? <AccountBoxIcon /> : <ExitToAppIcon />}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText
+                primary={text}
+                primaryTypographyProps={{ variant: "subtitle2" }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
