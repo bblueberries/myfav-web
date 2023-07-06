@@ -27,7 +27,6 @@ function Novel() {
   };
   return (
     <>
-      <CustomDrawer />
       <Grid container>
         <Grid item xs={"auto"}>
           {/* <SearchBar /> */}

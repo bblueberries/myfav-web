@@ -8,10 +8,15 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import HomeIcon from "@mui/icons-material/Home";
+import AccountBoxIcon from "@mui/icons-material/AccountBox";
+import { useNavigate } from "react-router";
+import { Container, IconButton } from "@mui/material";
+import { Menu } from "@mui/icons-material";
+import { grey } from "@mui/material/colors";
 export default function TemporaryDrawer() {
+  const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (open) => (event) => {
@@ -27,30 +32,28 @@ export default function TemporaryDrawer() {
 
   const list = () => (
     <Box
-      sx={{ width: "left" === "top" || "left" === "bottom" ? "auto" : 250 }}
+      sx={{ width: 250 }}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton onClick={() => alert("hello")}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        <ListItem key={"hello"} disablePadding>
+          <ListItemButton onClick={() => navigate("/")}>
+            <ListItemIcon>{<HomeIcon />}</ListItemIcon>
+            <ListItemText primary={"HOME"} />
+          </ListItemButton>
+        </ListItem>
       </List>
       <Divider />
       <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
+        {["About me", "Exit"].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton
+              onClick={index % 2 === 0 ? () => navigate("/about") : null}
+            >
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <AccountBoxIcon /> : <ExitToAppIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -62,12 +65,31 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <React.Fragment>
-        <Button onClick={toggleDrawer(true)}>left</Button>
-        <Drawer anchor={"left"} open={open} onClose={toggleDrawer(false)}>
+      <Container>
+        <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          aria-label="open drawer"
+          onClick={toggleDrawer(true)}
+          sx={{ mr: 0 }}
+        >
+          <Menu />
+        </IconButton>
+        <Drawer
+          anchor={"left"}
+          open={open}
+          onClose={toggleDrawer(false)}
+          PaperProps={{
+            sx: {
+              backgroundColor: grey[300],
+              color: grey[800],
+            },
+          }}
+        >
           {list()}
         </Drawer>
-      </React.Fragment>
+      </Container>
     </div>
   );
 }

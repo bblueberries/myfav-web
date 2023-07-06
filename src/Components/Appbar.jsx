@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchBar from "./SearchBar";
 import IconBar from "./IconBar";
+import CustomDrawer from "./CustomDrawer";
 import { grey } from "@mui/material/colors";
 import { useLocation } from "react-router";
 export default function SearchAppBar() {
@@ -79,15 +80,7 @@ export default function SearchAppBar() {
               <Box
                 sx={{ display: "flex", alignItems: "center", flexGrow: "1" }}
               >
-                <IconButton
-                  size="large"
-                  edge="start"
-                  color="inherit"
-                  aria-label="open drawer"
-                  sx={{ mr: 0 }}
-                >
-                  <MenuIcon />
-                </IconButton>
+                <CustomDrawer />
                 <Typography
                   variant="h6"
                   noWrap
