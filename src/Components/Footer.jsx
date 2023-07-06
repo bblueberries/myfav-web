@@ -18,7 +18,7 @@ export default function Footer() {
         <Container
           sx={{
             bgcolor: grey[500],
-            height: 150,
+            height: 180,
             mt: 20,
             borderTop: "5px solid grey",
             display: "flex",
@@ -26,15 +26,15 @@ export default function Footer() {
           }}
           maxWidth={false}
         >
-          <Grid container direction={"column"} xs={2}>
+          <Grid container direction={"column"}>
             <Grid
               item
               container
               sx={{
-                display: "flex",
-                justifyContent: "space-evenly",
                 px: 4,
-                mt: 3,
+                mt: 4.5,
+                display: "flex",
+                justifyContent: "center",
               }}
             >
               <Grid item>

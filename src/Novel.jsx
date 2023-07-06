@@ -1,6 +1,7 @@
 import { Typography, Grid } from "@mui/material";
 import Card from "./Components/Card";
 import SearchBar from "./Components/SearchBar";
+import CustomDrawer from "./Components/CustomDrawer";
 function Novel() {
   let mainCard = {
     width: "90%",
@@ -26,6 +27,7 @@ function Novel() {
   };
   return (
     <>
+      <CustomDrawer />
       <Grid container>
         <Grid item xs={"auto"}>
           {/* <SearchBar /> */}
