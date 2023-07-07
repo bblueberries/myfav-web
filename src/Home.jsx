@@ -6,16 +6,21 @@ const Home = () => {
   const videoStyle = {
     width: "100%",
     height: "100%",
-    marginBottom: "-10px",
+    // marginBottom: "-10px",
     objectFit: "cover",
   };
 
   const navigate = useNavigate();
   return (
     <Container
-      sx={{ position: "relative", width: "100%", height: "100vh" }}
+      sx={{
+        position: "relative",
+        width: "100vw",
+        height: "100vh",
+        // bgcolor: "red",
+      }}
       disableGutters
-      maxWidth="xl"
+      maxWidth="none"
     >
       {/* <Box sx={overlay}></Box> */}
       <video src={videoBg} autoPlay loop muted style={videoStyle} />

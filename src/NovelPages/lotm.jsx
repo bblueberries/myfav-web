@@ -15,7 +15,7 @@ const Lotm = () => {
           </Typography>
         </Grid>
         <Grid item container xs={12} mt={10} px={4}>
-          <Grid item xs={6} px={1}>
+          <Grid item xs={6} px={8}>
             <img src={lotmBg} loading="lazy" width="100%" />
           </Grid>
           <Grid item container xs={6} direction={"column"} px={3}>
