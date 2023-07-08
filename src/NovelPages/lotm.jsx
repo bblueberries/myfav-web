@@ -11,7 +11,7 @@ import { Context } from "../Context/Context";
 
 const Lotm = () => {
   const { toggleOpen, setToggleOpen } = useContext(Context);
-  const [imgSrc, setImgSrc] = useState("");
+  const { imgSrc, setImgSrc } = useContext(Context);
   return (
     <>
       {toggleOpen && <EnlargeImage imgLink={imgSrc} />}

@@ -29,18 +29,25 @@ export default function EnlargeImage(props) {
             setToggleOpen(false);
           }}
         >
-          <img
-            src={imgLink}
-            style={{
-              width: "60%",
-              height: "auto",
-              objectFit: "cover",
-              objectPosition: "center",
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "60vw", // Set to 60% of the viewport width
+              height: "100vh", // Set to 100% of the viewport height
             }}
-            onClick={(event) => {
-              event.stopPropagation();
-            }}
-          />
+          >
+            <img
+              src={imgLink}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+              }}
+              // onClick={(event) => event.stopPropagation()}
+            />
+          </Box>
         </Box>
       )}
     </>

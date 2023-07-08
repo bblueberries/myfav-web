@@ -17,7 +17,7 @@ const itemData = ImageData;
 
 export default function QuiltedImageList() {
   const { toggleOpen, setToggleOpen } = React.useContext(Context);
-  const [imgSrc, setImgSrc] = React.useState("");
+  const { imgSrc, setImgSrc } = React.useContext(Context);
   return (
     <>
       {toggleOpen && <EnlargeImage imgLink={imgSrc} />}
@@ -39,7 +39,6 @@ export default function QuiltedImageList() {
               loading="lazy"
               onClick={() => {
                 setImgSrc(item.img);
-                // console.log(item.img);
                 setToggleOpen(true);
               }}
             />
