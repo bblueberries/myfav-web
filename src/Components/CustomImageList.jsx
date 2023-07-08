@@ -2,6 +2,9 @@ import * as React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageData from "./ImageData";
+import EnlargeImage from "./EnlargeImage";
+import { Context } from "../Context/Context";
+
 function srcset(image, size, rows = 1, cols = 1) {
   return {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -11,27 +14,38 @@ function srcset(image, size, rows = 1, cols = 1) {
   };
 }
 const itemData = ImageData;
+
 export default function QuiltedImageList() {
+  const { toggleOpen, setToggleOpen } = React.useContext(Context);
+  const [imgSrc, setImgSrc] = React.useState("");
   return (
-    <ImageList
-      sx={{ width: "80%", height: "600px" }}
-      variant="quilted"
-      cols={3}
-      rowHeight={110}
-    >
-      {itemData.map((item) => (
-        <ImageListItem
-          key={item.img}
-          cols={item.cols || 1}
-          rows={item.rows || 1}
-        >
-          <img
-            {...srcset(item.img, 121, item.rows, item.cols)}
-            alt={item.title}
-            loading="lazy"
-          />
-        </ImageListItem>
-      ))}
-    </ImageList>
+    <>
+      {toggleOpen && <EnlargeImage imgLink={imgSrc} />}
+      <ImageList
+        sx={{ width: "80%", height: "600px" }}
+        variant="quilted"
+        cols={3}
+        rowHeight={110}
+      >
+        {itemData.map((item) => (
+          <ImageListItem
+            key={item.img}
+            cols={item.cols || 1}
+            rows={item.rows || 1}
+          >
+            <img
+              {...srcset(item.img, 121, item.rows, item.cols)}
+              alt={item.title}
+              loading="lazy"
+              onClick={() => {
+                setImgSrc(item.img);
+                // console.log(item.img);
+                setToggleOpen(true);
+              }}
+            />
+          </ImageListItem>
+        ))}
+      </ImageList>
+    </>
   );
 }

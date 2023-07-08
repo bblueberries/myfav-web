@@ -6,10 +6,15 @@ import lotmBg from "../assets/lotmPreview/lotmMain.jpg";
 import potionImage from "../assets/lotmPreview/potionImage.jpeg";
 import greyfogWallpaper from "../assets/lotmPreview/greyfogWallpaper.avif";
 import EnlargeImage from "../Components/EnlargeImage";
+import { useContext, useState } from "react";
+import { Context } from "../Context/Context";
+
 const Lotm = () => {
+  const { toggleOpen, setToggleOpen } = useContext(Context);
+  const [imgSrc, setImgSrc] = useState("");
   return (
-    <div position>
-      <EnlargeImage imgLink="https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg" />
+    <>
+      {toggleOpen && <EnlargeImage imgLink={imgSrc} />}
       <Grid container direction={"column"}>
         <Grid item xs={12} mt={2}>
           <Typography align="center" variant="h2">
@@ -187,7 +192,15 @@ const Lotm = () => {
           >
             <Grid item container direction={"column"} xs={4} px={5}>
               <Grid item>
-                <img src={potionImage} loading="lazy" width={"100%"} />
+                <img
+                  src={potionImage}
+                  loading="lazy"
+                  width={"100%"}
+                  onClick={() => {
+                    setToggleOpen(true);
+                    setImgSrc(potionImage);
+                  }}
+                />
               </Grid>
               <Grid item>
                 <Typography align="center" variant="h6">
@@ -226,7 +239,7 @@ const Lotm = () => {
           </Grid>
         </Grid>
       </Grid>
-    </div>
+    </>
   );
 };
 export default Lotm;

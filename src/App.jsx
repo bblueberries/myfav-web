@@ -17,12 +17,14 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/anime" element={<Anime />} />
-        <Route path="/manhwa" element={<Manhwa />} />
-        <Route path="/novel" element={<Novel />} />
-        <Route path="/manga" element={<Manga />} />
-        <Route path="/movie" element={<Movie />} />
-        <Route path="/novel/lotm" element={<Lotm />} />
+        <>
+          <Route path="/anime" element={<Anime />} />
+          <Route path="/manhwa" element={<Manhwa />} />
+          <Route path="/novel" element={<Novel />} />
+          <Route path="/manga" element={<Manga />} />
+          <Route path="/movie" element={<Movie />} />
+          <Route path="/novel/lotm" element={<Lotm />} />
+        </>
       </Routes>
       <Footer />
     </>
