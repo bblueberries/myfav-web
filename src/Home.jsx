@@ -23,7 +23,7 @@ const Home = () => {
       maxWidth="none"
     >
       {/* <Box sx={overlay}></Box> */}
-      <video src={videoBg} autoPlay loop muted style={videoStyle} />
+      <video src={videoBg} autoPlay loop muted playsInline style={videoStyle} />
       <Box
         sx={{
           width: "100%",
