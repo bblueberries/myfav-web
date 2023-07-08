@@ -5,9 +5,11 @@ import CustomImageList from "../Components/CustomImageList";
 import lotmBg from "../assets/lotmPreview/lotmMain.jpg";
 import potionImage from "../assets/lotmPreview/potionImage.jpeg";
 import greyfogWallpaper from "../assets/lotmPreview/greyfogWallpaper.avif";
+import EnlargeImage from "../Components/EnlargeImage";
 const Lotm = () => {
   return (
-    <div>
+    <div position>
+      <EnlargeImage imgLink="https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg" />
       <Grid container direction={"column"}>
         <Grid item xs={12} mt={2}>
           <Typography align="center" variant="h2">
