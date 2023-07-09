@@ -8,7 +8,7 @@ function Novel() {
     imgsrc: "https://wallpaperaccess.com/full/8084043.jpg",
     name: "LORD OF THE MYSTERIES",
     detail:
-      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique corrupti incidunt consectetur quaerat aspernatur delectus eius libero dolorem doloremque aliquam beatae, dolor illum. Eveniet vero nemo accusantium nisi aspernatur cum laborum enim quibusdam iste quos totam itaque voluptas earum atque, minus sequi officia, consectetur, qui quas! Voluptatibus quam, magnam autem nemo iure quidem similique doloribus perspiciatis provident ab aut? Molestiae laboriosam fugiat ipsum vitae cumque doloremque nemo cupiditate veritatis corporis maiores, praesentium expedita? Rerum delectus sit excepturi accusantium nisi labore optio pariatur rem porro necessitatibus sed, vitae molestiae, aut nesciunt culpa asperiores repellendus eveniet exercitationem commodi officiis architecto! Iusto, error.",
+      " Waking up to be faced with a string of mysteries, Zhou Mingrui finds himself reincarnated as Klein Moretti in an alternate Victorian era world where he sees a world filled with machinery, cannons, dreadnoughts, airships, difference machines, as well as Potions, Divination, Hexes, Tarot Cards, Sealed Artifacts… The Light continues to shine but the mystery has never gone far. Follow Klein as he finds himself entangled with the Churches of the world—both orthodox and unorthodox—while he slowly develops newfound powers thanks to the Beyonder potions.",
   };
   let subCard1 = {
     width: "100%",
@@ -16,14 +16,14 @@ function Novel() {
       "https://i.pinimg.com/originals/48/ed/95/48ed959ec1799848ba932dcc56af0df1.jpg",
     name: "OMNISCIENT READER'S VIEWPOINT",
     detail:
-      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique corrupti incidunt consectetur quaerat aspernatur delectus eius libero dolorem ",
+      " When the real world is plunged into the premise of Ways of Survival, Kim Dokja's unique knowledge of the novel becomes vital to his survival. Kim Dokja allies with Yoo Joonghyuk, the protagonist of Ways of Survival, in order to change the novel's original plot and more quickly approach the end of the story. ",
   };
   let subCard2 = {
     width: "100%",
     imgsrc: "https://wallpaperaccess.com/full/2043991.png",
     name: "CLASSROOM OF THE ELITE",
     detail:
-      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique corrupti incidunt consectetur quaerat aspernatur delectus eius libero dolorem ",
+      " Koudo Ikusei Senior High School is a leading prestigious school with state-of-the-art facilities where nearly 100% of students go on to university or find employment. The students there have the freedom to wear any hairstyle and bring any personal effects they desire. Koudo Ikusei is a paradise-like school, but the truth is that only the most superior of students receive favorable treatment. Ayanokouji Kiyotaka is a student of D-class, which is where the school dumps its 'inferior' students in order to ridicule them. For a certain reason, Kiyotaka was careless on his entrance examination, and was put in D-class. After meeting Horikita Suzune and Kushida Kikyou, two other students in his class, Kiyotaka's situation begins to change.",
   };
   return (
     <>
