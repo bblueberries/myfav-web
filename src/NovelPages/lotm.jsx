@@ -6,12 +6,18 @@ import lotmBg from "../assets/lotmPreview/lotmMain.jpg";
 import potionImage from "../assets/lotmPreview/potionImage.jpeg";
 import greyfogWallpaper from "../assets/lotmPreview/greyfogWallpaper.avif";
 import EnlargeImage from "../Components/EnlargeImage";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Context } from "../Context/Context";
 
 const Lotm = () => {
   const { toggleOpen, setToggleOpen } = useContext(Context);
   const { imgSrc, setImgSrc } = useContext(Context);
+
+  useEffect(() => {
+    setToggleOpen(false);
+    setImgSrc("");
+  }, []);
+
   return (
     <>
       {toggleOpen && <EnlargeImage imgLink={imgSrc} />}
