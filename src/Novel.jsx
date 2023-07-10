@@ -34,7 +34,7 @@ function Novel() {
       </Grid>
       <Grid container>
         <Grid item sx={{ display: "flex", justifyContent: "center" }}>
-          <Card cardDetail={mainCard} url="/novel/lotm" />{" "}
+          <Card cardDetail={mainCard} url="/novel/lotm" />
         </Grid>
       </Grid>
       <Grid
