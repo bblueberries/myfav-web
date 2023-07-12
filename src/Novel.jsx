@@ -2,6 +2,7 @@ import { Typography, Grid } from "@mui/material";
 import Card from "./Components/Card";
 import SearchBar from "./Components/SearchBar";
 import CustomDrawer from "./Components/CustomDrawer";
+import { AnimatedPage } from "./Components/AnimatedRoute";
 function Novel() {
   let mainCard = {
     width: "90%",
@@ -26,7 +27,7 @@ function Novel() {
       " Koudo Ikusei Senior High School is a leading prestigious school with state-of-the-art facilities where nearly 100% of students go on to university or find employment. The students there have the freedom to wear any hairstyle and bring any personal effects they desire. Koudo Ikusei is a paradise-like school, but the truth is that only the most superior of students receive favorable treatment. Ayanokouji Kiyotaka is a student of D-class, which is where the school dumps its 'inferior' students in order to ridicule them. For a certain reason, Kiyotaka was careless on his entrance examination, and was put in D-class. After meeting Horikita Suzune and Kushida Kikyou, two other students in his class, Kiyotaka's situation begins to change.",
   };
   return (
-    <>
+    <AnimatedPage>
       <Grid container>
         <Grid item xs={"auto"}>
           {/* <SearchBar /> */}
@@ -52,7 +53,7 @@ function Novel() {
           <Card cardDetail={subCard2} url="" />
         </Grid>
       </Grid>
-    </>
+    </AnimatedPage>
   );
 }
 export default Novel;

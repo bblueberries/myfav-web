@@ -2,6 +2,7 @@ import { Typography, Grid } from "@mui/material";
 import Card from "./Components/Card";
 import SearchBar from "./Components/SearchBar";
 import CustomDrawer from "./Components/CustomDrawer";
+import { AnimatedPage } from "./Components/AnimatedRoute";
 const Anime = () => {
   let mainCard = {
     width: "80%",
@@ -27,7 +28,7 @@ const Anime = () => {
       'The Republic of San Magnolia is at war with its neighboring country, the Empire of Giad. Both sides use unmanned drones to conduct a "war without casualties". The story follows Lena as she commands a squad of drones called the 86.',
   };
   return (
-    <>
+    <AnimatedPage>
       <Grid container>
         <Grid item xs={"auto"}>
           {/* <SearchBar /> */}
@@ -53,7 +54,7 @@ const Anime = () => {
           <Card cardDetail={subCard2} url="" />
         </Grid>
       </Grid>
-    </>
+    </AnimatedPage>
   );
 };
 
