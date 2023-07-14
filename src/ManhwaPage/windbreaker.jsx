@@ -8,9 +8,9 @@ import greyfogWallpaper from "../assets/lotmPreview/greyfogWallpaper.avif";
 import EnlargeImage from "../Components/EnlargeImage";
 import { useContext, useEffect, useState } from "react";
 import { Context } from "../Context/Context";
-import { LotmData } from "../Components/ImageData";
+import { WindbreakerData } from "../Components/ImageData";
 
-const Lotm = () => {
+const windbreaker = () => {
   const { toggleOpen, setToggleOpen } = useContext(Context);
   const { imgSrc, setImgSrc } = useContext(Context);
 
@@ -29,8 +29,12 @@ const Lotm = () => {
           </Typography>
         </Grid>
         <Grid item container xs={12} mt={10} px={4}>
-          <Grid item xs={6} px={8}>
-            <img src={lotmBg} loading="lazy" width="100%" />
+          <Grid item xs={6} px={8} display="flex" justifyContent="center">
+            <img
+              src="https://read-windbreaker.online/wp-content/uploads/2022/09/wind-breaker-poster-1.jpg"
+              loading="lazy"
+              width="70%"
+            />
           </Grid>
           <Grid item container xs={6} direction={"column"} px={3}>
             <Grid item container>
@@ -58,12 +62,12 @@ const Lotm = () => {
                 </Grid>
                 <Grid item>
                   <Typography variant="h4" align="center">
-                    9.5
+                    9.0
                   </Typography>
                 </Grid>
                 <Grid item display={"flex"} justifyContent={"center"}>
                   <Typography>
-                    <CustomRating value="9.5" />
+                    <CustomRating value="9" />
                   </Typography>
                 </Grid>
               </Grid>
@@ -82,11 +86,11 @@ const Lotm = () => {
                 <Grid item container mt={0.5}>
                   <Grid item display="flex" alignItems={"center"}>
                     <Typography variant="subtitle2">
-                      Chinese Title : &nbsp;
+                      Korean Title : &nbsp;
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography variant="subtitle1">诡秘之主</Typography>
+                    <Typography variant="subtitle1">윈드 브레이커</Typography>
                   </Grid>
                 </Grid>
                 <Grid item container mt={0.5}>
@@ -94,7 +98,7 @@ const Lotm = () => {
                     <Typography variant="subtitle2">Author : &nbsp;</Typography>
                   </Grid>
                   <Grid item>
-                    <Typography> Cuttlefish That Loves Diving</Typography>
+                    <Typography> Jo Yongseok</Typography>
                   </Grid>
                 </Grid>
                 <Grid item container mt={0.5}>
@@ -104,7 +108,7 @@ const Lotm = () => {
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography> Apl 1, 2018 - May 1, 2020</Typography>
+                    <Typography> Dec 15, 2013 - ongoing</Typography>
                   </Grid>
                 </Grid>
               </Grid>
@@ -126,7 +130,7 @@ const Lotm = () => {
                 >
                   Current Reading
                   <br />
-                  520/1430
+                  finished ss3
                 </Typography>
               </Grid>
             </Grid>
@@ -136,17 +140,21 @@ const Lotm = () => {
               </Grid>
               <Grid item mt={2}>
                 <Typography variant="subtitle1">
-                  &emsp;Waking up to be faced with a string of mysteries, Zhou
-                  Mingrui finds himself reincarnated as Klein Moretti in an
-                  alternate Victorian era world where he sees a world filled
-                  with machinery, cannons, dreadnoughts, airships, difference
-                  machines, as well as Potions, Divination, Hexes, Tarot Cards,
-                  Sealed Artifacts… <br />
-                  &emsp;The Light continues to shine but the mystery has never
-                  gone far. Follow Klein as he finds himself entangled with the
-                  Churches of the world—both orthodox and unorthodox—while he
-                  slowly develops newfound powers thanks to the Beyonder
-                  potions.
+                  &emsp;Burdened with expectations since childhood, second-year
+                  high schooler Jo "Jay" Ja Hyun feels obligated to aim for the
+                  top through his studies. Despite obtaining the title of
+                  student president at Taeyang High, he continues to study
+                  diligently, giving him little time to befriend others.
+                  However, possessing an exceptional talent for biking with a
+                  technique that astonishes other experienced bikers, there is
+                  more to him than meets the eye. <br />
+                  &emsp;One afternoon, while Jay is skidding his bike at high
+                  speed, he catches the interest of his classmate, Yoon Min Woo.
+                  Amazed by his unparalleled biking skill, Min Woo is quick to
+                  recruit him to his biking crew, but Jay coldly rejects the
+                  offer. With a determination to show Jay the fun of riding with
+                  others, Min Woo proposes a simple deal—to race against a
+                  member of his team, promising to leave him alone if he wins.
                 </Typography>
               </Grid>
             </Grid>
@@ -174,8 +182,7 @@ const Lotm = () => {
               </Typography>
             </Grid>
             <Grid item display={"flex"} justifyContent={"center"} mt={3}>
-              <CustomImageList ImageData={LotmData} />
-              {/* <Typography>hello</Typography> */}
+              <CustomImageList ImageData={WindbreakerData} />
             </Grid>
             <Grid item>
               <Typography variant="subtitle2" align="center" color={"white"}>
@@ -250,4 +257,4 @@ const Lotm = () => {
     </>
   );
 };
-export default Lotm;
+export default windbreaker;

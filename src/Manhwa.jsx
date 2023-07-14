@@ -2,6 +2,7 @@ import { Typography, Grid } from "@mui/material";
 import Card from "./Components/Card";
 import SearchBar from "./Components/SearchBar";
 import CustomDrawer from "./Components/CustomDrawer";
+import { AnimatedPage } from "./Components/AnimatedRoute";
 const Manhwa = () => {
   let mainCard = {
     width: "70%",
@@ -27,7 +28,7 @@ const Manhwa = () => {
       " When Joon moves into a new apartment for his first day in college, he was not expecting an ex celebrity, Duna, to be living downstairs, hiding from her past life. Joon finds Duna strange and avoids her at first, but soon finds himself in her room without realizing what he is getting himself into.",
   };
   return (
-    <>
+    <AnimatedPage>
       <Grid container>
         <Grid item xs={"auto"}>
           {/* <SearchBar /> */}
@@ -35,7 +36,7 @@ const Manhwa = () => {
       </Grid>
       <Grid container>
         <Grid item sx={{ display: "flex", justifyContent: "center" }}>
-          <Card cardDetail={mainCard} url="" />{" "}
+          <Card cardDetail={mainCard} url="/manhwa/windbreaker" />{" "}
         </Grid>
       </Grid>
       <Grid
@@ -50,10 +51,10 @@ const Manhwa = () => {
         </Grid>
 
         <Grid item xs={5}>
-          <Card cardDetail={subCard2} url="" />
+          <Card cardDetail={subCard2} url="" unAvailable />
         </Grid>
       </Grid>
-    </>
+    </AnimatedPage>
   );
 };
 export default Manhwa;

@@ -9,6 +9,7 @@ export default function ActionAreaCard(props) {
   let cardDetail = props.cardDetail;
   let url = props.url;
   const navigate = useNavigate();
+  let unAvailable = props.unAvailable;
 
   const handleClick = () => {
     navigate(url);
@@ -28,6 +29,11 @@ export default function ActionAreaCard(props) {
       <CardContent sx={{ maxHeight: "1", px: 4 }}>
         <Typography gutterBottom variant="h5" component="div">
           {cardDetail.name}
+          {unAvailable && (
+            <Typography variant="h5" color="red" component="span">
+              &nbsp;(unavailable now)
+            </Typography>
+          )}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {cardDetail.detail}

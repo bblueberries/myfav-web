@@ -40,8 +40,8 @@ export default function SearchAppBar() {
         ];
         updatedDestination = {
           [updatedTopics[0]]: "/novel/lotm",
-          [updatedTopics[1]]: "/novel/orv",
-          [updatedTopics[2]]: "/novel/cote",
+          [updatedTopics[1]]: "/novel",
+          [updatedTopics[2]]: "/novel",
         };
         break;
       case "/manga":

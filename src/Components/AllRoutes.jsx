@@ -6,6 +6,7 @@ import Novel from "../Novel";
 import Movie from "../Movie";
 import Manga from "../Manga";
 import Lotm from "../NovelPages/lotm";
+import Windbreaker from "../ManhwaPage/windbreaker";
 import { useLocation } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
@@ -21,6 +22,7 @@ export default function AllRoutes() {
         <Route path="/manga" element={<Manga />} />
         <Route path="/movie" element={<Movie />} />
         <Route path="/novel/lotm" element={<Lotm />} />
+        <Route path="/manhwa/windbreaker" element={<Windbreaker />} />
       </Routes>
     </AnimatePresence>
   );

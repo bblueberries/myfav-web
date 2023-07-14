@@ -1,7 +1,7 @@
 import * as React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import ImageData from "./ImageData";
+// import { LotmData } from "./ImageData";
 import EnlargeImage from "./EnlargeImage";
 import { Context } from "../Context/Context";
 
@@ -13,9 +13,10 @@ function srcset(image, size, rows = 1, cols = 1) {
     }&fit=crop&auto=format&dpr=2 2x`,
   };
 }
-const itemData = ImageData;
-
-export default function QuiltedImageList() {
+// const itemData = LotmData;
+// console.log(itemData);
+export default function QuiltedImageList(props) {
+  const itemData = props.ImageData;
   const { toggleOpen, setToggleOpen } = React.useContext(Context);
   const { imgSrc, setImgSrc } = React.useContext(Context);
   return (
