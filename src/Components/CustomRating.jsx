@@ -16,7 +16,7 @@ const StyledRating = styled(Rating)({
 });
 
 export default function CustomizedRating(props) {
-  const value = props.value;
+  const value = props.value / 2;
   return (
     <Box
       sx={{

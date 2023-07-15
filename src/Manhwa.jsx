@@ -47,7 +47,7 @@ const Manhwa = () => {
         sx={{ mt: 10, mb: 8 }}
       >
         <Grid item xs={5}>
-          <Card cardDetail={subCard1} url="" />
+          <Card cardDetail={subCard1} url="" unAvailable />
         </Grid>
 
         <Grid item xs={5}>

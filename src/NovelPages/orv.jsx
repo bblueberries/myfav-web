@@ -8,9 +8,9 @@ import greyfogWallpaper from "../assets/lotmPreview/greyfogWallpaper.avif";
 import EnlargeImage from "../Components/EnlargeImage";
 import { useContext, useEffect, useState } from "react";
 import { Context } from "../Context/Context";
-import { WindbreakerData } from "../Components/ImageData";
+import { OrvData } from "../Components/ImageData";
 
-const windbreaker = () => {
+const Orv = () => {
   const { toggleOpen, setToggleOpen } = useContext(Context);
   const { imgSrc, setImgSrc } = useContext(Context);
 
@@ -25,15 +25,15 @@ const windbreaker = () => {
       <Grid container direction={"column"}>
         <Grid item xs={12} mt={2}>
           <Typography align="center" variant="h2">
-            WINDBREAKER
+            OMNISCIENT READER'S VIEWPOINT
           </Typography>
         </Grid>
         <Grid item container xs={12} mt={10} px={4}>
-          <Grid item xs={6} px={8} display="flex" justifyContent="center">
+          <Grid item xs={6} px={8}>
             <img
-              src="https://read-windbreaker.online/wp-content/uploads/2022/09/wind-breaker-poster-1.jpg"
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhci6KSYbZtZdGDY9CxaJk4wD7-ChCT_SMA2sVb6zYJwBXSoUF8U1Jhm3ZsnMC0Ib7ksztpGxu-Anv02t0iqE4LWmC37QhG2sa-OU2qi-a9nY905ot4WZcJRGPIebW26US0phe4bmJ5r4Ta0_z1YVSY59n1xHuFEhkIYPGysR1VQkiER_VbcAuC4I6znf4/s1920/OMNISCIENT%20READERS%20VIEWPOINT%201.jpg"
               loading="lazy"
-              width="70%"
+              width="100%"
             />
           </Grid>
           <Grid item container xs={6} direction={"column"} px={3}>
@@ -67,7 +67,7 @@ const windbreaker = () => {
                 </Grid>
                 <Grid item display={"flex"} justifyContent={"center"}>
                   <Typography>
-                    <CustomRating value="9" />
+                    <CustomRating value="9.0" />
                   </Typography>
                 </Grid>
               </Grid>
@@ -90,7 +90,9 @@ const windbreaker = () => {
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography variant="subtitle1">윈드 브레이커</Typography>
+                    <Typography variant="subtitle1">
+                      전지적 독자 시점
+                    </Typography>
                   </Grid>
                 </Grid>
                 <Grid item container mt={0.5}>
@@ -98,7 +100,7 @@ const windbreaker = () => {
                     <Typography variant="subtitle2">Author : &nbsp;</Typography>
                   </Grid>
                   <Grid item>
-                    <Typography> Jo Yongseok</Typography>
+                    <Typography> Sing Shong</Typography>
                   </Grid>
                 </Grid>
                 <Grid item container mt={0.5}>
@@ -108,7 +110,7 @@ const windbreaker = () => {
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography> Dec 15, 2013 - ongoing</Typography>
+                    <Typography> 6 Jan, 2018 – 2 Feb, 2020 </Typography>
                   </Grid>
                 </Grid>
               </Grid>
@@ -130,7 +132,7 @@ const windbreaker = () => {
                 >
                   Current Reading
                   <br />
-                  finished ss3
+                  Finished
                 </Typography>
               </Grid>
             </Grid>
@@ -140,21 +142,19 @@ const windbreaker = () => {
               </Grid>
               <Grid item mt={2}>
                 <Typography variant="subtitle1">
-                  &emsp;Burdened with expectations since childhood, second-year
-                  high schooler Jo "Jay" Ja Hyun feels obligated to aim for the
-                  top through his studies. Despite obtaining the title of
-                  student president at Taeyang High, he continues to study
-                  diligently, giving him little time to befriend others.
-                  However, possessing an exceptional talent for biking with a
-                  technique that astonishes other experienced bikers, there is
-                  more to him than meets the eye. <br />
-                  &emsp;One afternoon, while Jay is skidding his bike at high
-                  speed, he catches the interest of his classmate, Yoon Min Woo.
-                  Amazed by his unparalleled biking skill, Min Woo is quick to
-                  recruit him to his biking crew, but Jay coldly rejects the
-                  offer. With a determination to show Jay the fun of riding with
-                  others, Min Woo proposes a simple deal—to race against a
-                  member of his team, promising to leave him alone if he wins.
+                  &emsp;A novel called Three Ways to Survive in a Ruined World
+                  (written by the anonymous author tls123) has been written and
+                  published over the course of a decade, and Kim Dokja is the
+                  sole reader who has followed it to its ending. When the real
+                  world is plunged into the premise of Ways of Survival, Kim
+                  Dokja's unique knowledge of the novel becomes vital to his
+                  survival. Kim Dokja allies with Yoo Joonghyuk, the protagonist
+                  of Ways of Survival, in order to change the novel's original
+                  plot and more quickly approach the end of the story. As Kim
+                  Dokja and his party members progress through the scenarios,
+                  they face increasingly difficult threats and life-or-death
+                  challenges, struggling to stay alive and work together as they
+                  aim to destroy the "Star Stream" that demands their suffering.
                 </Typography>
               </Grid>
             </Grid>
@@ -182,11 +182,12 @@ const windbreaker = () => {
               </Typography>
             </Grid>
             <Grid item display={"flex"} justifyContent={"center"} mt={3}>
-              <CustomImageList ImageData={WindbreakerData} col={4} />
+              <CustomImageList ImageData={OrvData} col={3} />
+              {/* <Typography>hello</Typography> */}
             </Grid>
             <Grid item>
               <Typography variant="subtitle2" align="center" color={"white"}>
-                Amazing Arts, good highschool drama, romance and action
+                Official arts of mr BlackBox is the best!
               </Typography>
             </Grid>
           </Grid>
@@ -207,33 +208,34 @@ const windbreaker = () => {
           >
             <Grid item xs={5}>
               <img
-                src="https://preview.redd.it/dr3rc72444s81.png?width=1145&format=png&auto=webp&s=f9908a9e84814d4012f2ef0a3d5fa752e15871b4"
+                src="https://w0.peakpx.com/wallpaper/928/920/HD-wallpaper-han-sooyoung-and-scan-gallery-omniscient-reader-s-viewpoint.jpg"
                 loading="lazy"
                 width={"100%"}
                 onClick={() => {
                   setToggleOpen(true);
                   setImgSrc(
-                    "https://preview.redd.it/dr3rc72444s81.png?width=1145&format=png&auto=webp&s=f9908a9e84814d4012f2ef0a3d5fa752e15871b4"
+                    "https://w0.peakpx.com/wallpaper/928/920/HD-wallpaper-han-sooyoung-and-scan-gallery-omniscient-reader-s-viewpoint.jpg"
                   );
                 }}
               />
             </Grid>
             <Grid item xs={5}>
               <img
-                src="https://preview.redd.it/1gnbntj144s81.png?width=1183&format=png&auto=webp&s=4d0dca059502888de29c988080bb897f2be67001"
+                src="https://cdn.donmai.us/original/87/c8/87c8da549c21ce48e87337d8d70447e5.jpg"
                 loading="lazy"
                 width={"100%"}
                 onClick={() => {
                   setToggleOpen(true);
                   setImgSrc(
-                    "https://preview.redd.it/1gnbntj144s81.png?width=1183&format=png&auto=webp&s=4d0dca059502888de29c988080bb897f2be67001"
+                    "https://cdn.donmai.us/original/87/c8/87c8da549c21ce48e87337d8d70447e5.jpg"
                   );
                 }}
               />
             </Grid>
             <Grid item xs={12} mt={5}>
               <Typography align="center" variant="subtitle2">
-                Amazing art evolution since ss1 to ss4
+                I love how this novel show the meaning of "friendship" the most,
+                and this trio are the BEST I've ever seen..
               </Typography>
             </Grid>
           </Grid>
@@ -242,4 +244,4 @@ const windbreaker = () => {
     </>
   );
 };
-export default windbreaker;
+export default Orv;

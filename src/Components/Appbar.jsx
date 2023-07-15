@@ -25,12 +25,24 @@ export default function SearchAppBar() {
 
     switch (currentPath) {
       case "/anime":
-        updatedTopics = [];
-        updatedDestination = {};
+        updatedTopics = ["CODE GEASS", "STEIN GATE", "EIGHTY SIX 86"];
+        updatedDestination = {
+          [updatedTopics[0]]: "/anime/codegeass",
+          [updatedTopics[1]]: "/anime",
+          [updatedTopics[2]]: "/anime",
+        };
         break;
       case "/manhwa":
-        updatedTopics = [];
-        updatedDestination = {};
+        updatedTopics = [
+          "WINDBREAKER",
+          "SEASONS OF BLOSSOM",
+          "THE GIRL DOWNSTAIR",
+        ];
+        updatedDestination = {
+          [updatedTopics[0]]: "/manhwa/windbreaker",
+          [updatedTopics[1]]: "/manhwa",
+          [updatedTopics[2]]: "/manhwa",
+        };
         break;
       case "/novel":
         updatedTopics = [
@@ -40,17 +52,20 @@ export default function SearchAppBar() {
         ];
         updatedDestination = {
           [updatedTopics[0]]: "/novel/lotm",
-          [updatedTopics[1]]: "/novel",
+          [updatedTopics[1]]: "/novel/orv",
           [updatedTopics[2]]: "/novel",
         };
         break;
       case "/manga":
-        updatedTopics = [];
-        updatedDestination = {};
+        updatedTopics = ["ATTACK ON TITAN", "PANDORA HEART"];
+        updatedDestination = {
+          [updatedTopics[0]]: "/manga/aot",
+          [updatedTopics[1]]: "/manga",
+        };
         break;
       case "/movie":
-        updatedTopics = [];
-        updatedDestination = {};
+        updatedTopics = ["TENET"];
+        updatedDestination = { [updatedTopics[0]]: "/movie" };
         break;
       default:
         updatedTopics = [];
