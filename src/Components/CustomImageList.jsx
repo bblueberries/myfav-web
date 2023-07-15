@@ -17,6 +17,7 @@ function srcset(image, size, rows = 1, cols = 1) {
 // console.log(itemData);
 export default function QuiltedImageList(props) {
   const itemData = props.ImageData;
+  const col = props.col;
   const { toggleOpen, setToggleOpen } = React.useContext(Context);
   const { imgSrc, setImgSrc } = React.useContext(Context);
   return (
@@ -25,7 +26,7 @@ export default function QuiltedImageList(props) {
       <ImageList
         sx={{ width: "80%", height: "600px" }}
         variant="quilted"
-        cols={3}
+        cols={col}
         rowHeight={110}
       >
         {itemData.map((item) => (

@@ -174,7 +174,7 @@ const Lotm = () => {
               </Typography>
             </Grid>
             <Grid item display={"flex"} justifyContent={"center"} mt={3}>
-              <CustomImageList ImageData={LotmData} />
+              <CustomImageList ImageData={LotmData} col={3} />
               {/* <Typography>hello</Typography> */}
             </Grid>
             <Grid item>

@@ -182,12 +182,11 @@ const windbreaker = () => {
               </Typography>
             </Grid>
             <Grid item display={"flex"} justifyContent={"center"} mt={3}>
-              <CustomImageList ImageData={WindbreakerData} />
+              <CustomImageList ImageData={WindbreakerData} col={4} />
             </Grid>
             <Grid item>
               <Typography variant="subtitle2" align="center" color={"white"}>
-                At first, I started reading this novel because of these amazing
-                fanarts (And now, I LOVE IT!)
+                Amazing Arts, good highschool drama, romance and action
               </Typography>
             </Grid>
           </Grid>
@@ -202,54 +201,40 @@ const windbreaker = () => {
             item
             container
             mt={6}
-            display={"flex"}
-            justifyContent={"center"}
+            justifyContent={"space-evenly"}
+            // display={"flex"}
+            // justifyContent={"center"}
           >
-            <Grid item container direction={"column"} xs={4} px={5}>
-              <Grid item>
-                <img
-                  src={potionImage}
-                  loading="lazy"
-                  width={"100%"}
-                  onClick={() => {
-                    setToggleOpen(true);
-                    setImgSrc(potionImage);
-                  }}
-                />
-              </Grid>
-              <Grid item>
-                <Typography align="center" variant="h6">
-                  All beyonders' sequences table
-                </Typography>
-              </Grid>
+            <Grid item xs={5}>
+              <img
+                src="https://preview.redd.it/dr3rc72444s81.png?width=1145&format=png&auto=webp&s=f9908a9e84814d4012f2ef0a3d5fa752e15871b4"
+                loading="lazy"
+                width={"100%"}
+                onClick={() => {
+                  setToggleOpen(true);
+                  setImgSrc(
+                    "https://preview.redd.it/dr3rc72444s81.png?width=1145&format=png&auto=webp&s=f9908a9e84814d4012f2ef0a3d5fa752e15871b4"
+                  );
+                }}
+              />
             </Grid>
-            <Grid item container xs={6} px={6} direction={"column"} mt={6}>
-              <Grid item>
-                <Typography variant="subtitle1" fontWeight={"bold"}>
-                  The Power System
-                </Typography>
-              </Grid>
-              <Grid item mt={2}>
-                <Typography variant="subtitle1">
-                  The power system is extremely well done. <br />
-                  &emsp;It has solid rules that can't be violated and play a key
-                  part in plot progression while also having a crazy amount of
-                  flexibility. It has 22 pathways. Starting at 9th sequence,the
-                  less of your sequence number,the Stronger you are. (But easier
-                  to loss self control and turn into monster) <br />
-                  &emsp; After reading through 500 chapters, I never seen any
-                  power system that can compare to LOTM's. It very
-                  unique,complicating and important to the story. Each has
-                  different advantage, some of them are strong since early
-                  sequence, some are for create artifact or some are for spying.
-                </Typography>
-              </Grid>
-              <Grid item mt={5}>
-                <Typography variant="subtitle2" align="center">
-                  What I can say is you guys have to try this amazing novels and
-                  you will end up addicting it like me...
-                </Typography>
-              </Grid>
+            <Grid item xs={5}>
+              <img
+                src="https://preview.redd.it/1gnbntj144s81.png?width=1183&format=png&auto=webp&s=4d0dca059502888de29c988080bb897f2be67001"
+                loading="lazy"
+                width={"100%"}
+                onClick={() => {
+                  setToggleOpen(true);
+                  setImgSrc(
+                    "https://preview.redd.it/1gnbntj144s81.png?width=1183&format=png&auto=webp&s=4d0dca059502888de29c988080bb897f2be67001"
+                  );
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} mt={5}>
+              <Typography align="center" variant="subtitle2">
+                Amazing art evolution since ss1 to ss4
+              </Typography>
             </Grid>
           </Grid>
         </Grid>
