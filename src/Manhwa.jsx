@@ -49,10 +49,6 @@ const Manhwa = () => {
         <Grid item xs={5}>
           <Card cardDetail={subCard1} url="" unAvailable />
         </Grid>
-
-        <Grid item xs={5}>
-          <Card cardDetail={subCard2} url="" unAvailable />
-        </Grid>
       </Grid>
     </AnimatedPage>
   );

@@ -5,7 +5,7 @@ import CustomDrawer from "./Components/CustomDrawer";
 import { AnimatedPage } from "./Components/AnimatedRoute";
 const Manga = () => {
   let mainCard = {
-    width: "80%",
+    width: "70%",
     imgsrc: "https://images3.alphacoders.com/612/612522.jpg",
     name: "ATTACK ON TITAN",
     detail:
@@ -28,7 +28,7 @@ const Manga = () => {
       </Grid>
       <Grid container>
         <Grid item sx={{ display: "flex", justifyContent: "center" }}>
-          <Card cardDetail={mainCard} url="" />{" "}
+          <Card cardDetail={mainCard} url="" unAvailable />{" "}
         </Grid>
       </Grid>
       <Grid

@@ -5,7 +5,7 @@ import CustomDrawer from "./Components/CustomDrawer";
 import { AnimatedPage } from "./Components/AnimatedRoute";
 function Novel() {
   let mainCard = {
-    width: "90%",
+    width: "70%",
     imgsrc: "https://wallpaperaccess.com/full/8084043.jpg",
     name: "LORD OF THE MYSTERIES",
     detail:

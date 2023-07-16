@@ -11,6 +11,7 @@ import Windbreaker from "../ManhwaPage/windbreaker";
 import { useLocation } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import About from "../About";
 
 export default function AllRoutes() {
   const location = useLocation();
@@ -26,6 +27,7 @@ export default function AllRoutes() {
         <Route path="/novel/lotm" element={<Lotm />} />
         <Route path="/novel/orv" element={<Orv />} />
         <Route path="/manhwa/windbreaker" element={<Windbreaker />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </AnimatePresence>
   );

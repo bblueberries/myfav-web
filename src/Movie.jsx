@@ -5,7 +5,7 @@ import CustomDrawer from "./Components/CustomDrawer";
 import { AnimatedPage } from "./Components/AnimatedRoute";
 const Movie = () => {
   let mainCard = {
-    width: "80%",
+    width: "70%",
     imgsrc: "https://lotofsense.com/wp-content/uploads/2022/06/share.jpg",
     name: "TENET",
     detail:

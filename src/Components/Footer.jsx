@@ -12,6 +12,9 @@ import { grey } from "@mui/material/colors";
 export default function Footer() {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const linkTo = (url) => {
+    window.open(url, "_blank");
+  };
   return (
     <>
       {!isHomePage && (
@@ -38,7 +41,7 @@ export default function Footer() {
               }}
             >
               <Grid item>
-                <IconButton onClick={() => alert("Hiii")}>
+                <IconButton onClick={() => alert("lorem")}>
                   <Avatar
                     variant="rounded"
                     alt="InstagramIcon"
@@ -47,7 +50,7 @@ export default function Footer() {
                 </IconButton>
               </Grid>
               <Grid item>
-                <IconButton onClick={() => alert("Hiii")}>
+                <IconButton onClick={() => alert("lorem")}>
                   <Avatar
                     alt="DiscordIcon"
                     src="https://www.freeiconspng.com/uploads/discord-black-icon-1.png"
@@ -55,7 +58,9 @@ export default function Footer() {
                 </IconButton>
               </Grid>
               <Grid item>
-                <IconButton onClick={() => alert("Hiii")}>
+                <IconButton
+                  onClick={() => linkTo("https://github.com/bblueberries")}
+                >
                   <Avatar
                     alt="githubIcon"
                     src="https://cdn-icons-png.flaticon.com/512/25/25231.png"

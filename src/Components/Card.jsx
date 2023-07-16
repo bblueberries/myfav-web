@@ -29,9 +29,13 @@ export default function ActionAreaCard(props) {
       <CardContent sx={{ maxHeight: "1", px: 4 }}>
         <Typography gutterBottom variant="h5" component="div">
           {cardDetail.name}
-          {unAvailable && (
+          {unAvailable ? (
             <Typography variant="h5" color="red" component="span">
               &nbsp;(unavailable now)
+            </Typography>
+          ) : (
+            <Typography variant="h5" color="green" component="span">
+              &nbsp; ●
             </Typography>
           )}
         </Typography>

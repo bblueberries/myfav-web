@@ -5,7 +5,7 @@ import CustomDrawer from "./Components/CustomDrawer";
 import { AnimatedPage } from "./Components/AnimatedRoute";
 const Anime = () => {
   let mainCard = {
-    width: "80%",
+    width: "70%",
     imgsrc: "https://images8.alphacoders.com/457/457869.jpg",
     name: "CODE GEASS",
     detail:
@@ -36,7 +36,7 @@ const Anime = () => {
       </Grid>
       <Grid container>
         <Grid item sx={{ display: "flex", justifyContent: "center" }}>
-          <Card cardDetail={mainCard} url="" />{" "}
+          <Card cardDetail={mainCard} url="" unAvailable />
         </Grid>
       </Grid>
       <Grid
@@ -48,10 +48,6 @@ const Anime = () => {
       >
         <Grid item xs={5}>
           <Card cardDetail={subCard1} url="" unAvailable />
-        </Grid>
-
-        <Grid item xs={5}>
-          <Card cardDetail={subCard2} url="" unAvailable />
         </Grid>
       </Grid>
     </AnimatedPage>
